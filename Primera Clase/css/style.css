@@ -1,0 +1,25 @@
+
+.portada:hover{
+    color:  fuchsia;
+}
+
+.nombre:hover{
+    color: fuchsia;
+}
+
+.inicio:hover{
+    color:  fuchsia;
+}
+
+.imagen{
+    text-align: center;
+    border-radius: 5%;
+    box-shadow: 1 em;
+}
+
+.imagen:hover{
+    border-style: solid;
+    border-color: fuchsia;
+}
+
+
