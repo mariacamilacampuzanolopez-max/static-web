@@ -1,25 +1,37 @@
+body {
 
-.portada:hover{
-    color:  fuchsia;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: linear-gradient(to right, #f0f4f8, hsl(311, 84%, 90%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.calculadora {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
 }
 
-.nombre:hover{
-    color: fuchsia;
+input, button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
-.inicio:hover{
-    color:  fuchsia;
+button {
+  background-color: pink;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.imagen{
-    text-align: center;
-    border-radius: 5%;
-    box-shadow: 1 em;
+button:hover {
+  background-color: hwb(311 1% 2%);
 }
-
-.imagen:hover{
-    border-style: solid;
-    border-color: fuchsia;
-}
-
-
