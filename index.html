@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>primera Clase </title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculadora</title>
 </head>
 <body>
-    hola
-    <h1 style="color: rgb(64, 14, 245);" >Esto esta en h1</h1>  
-    <h2 style="font-family: fantasy;">Esto esta en h2</h2>
-    <h3 style=" font-family: 'Lucida Sans'; color: blue;">Esto esta en h3</h3>
-    <h4 style="font-size: 100px;">Esto esta en h4</h4>
-    <h5 style="background-color: cadetblue;">Esto esta en h5</h5>
-    <P style="border-style: dotted;">Esto es un texto grande que <b>deberia</b>
-        poder utilizar sin problemas </P>
-      <img src="img/gata.jfif">
-      <img style="border-radius: 50%; width:200px; height: 200px;" src="./img/gata.jfif">
+<div class="calculadora">
+    <form id="calculadora" action="/">
+        <h1>Calculadora</h1>
+         <label>Ingrese el primer numero:</label>
+        <input type="number" id="numero1" placeholder="ej: 1" name="numero1" required>
+        <br>
+        <button type="button" data-operacion="-">-</button>
+        <button type="button" data-operacion="+">+</button>
+        <button type="button" data-operacion="*">*</button>
+        <button type="button" data-operacion="/">/</button>
+        <br>
+        <label>Ingrese el segundo numero:</label>
+        <input type="number" id="numero2" placeholder="ej: 2" name="numero2" required>
+        <br> 
+        <button type="submit"> Calcular</button>
+        
+    </form>
 
-      <button type="button"><a href=
-        "https://www.tiktok.com/@natsukitorres/video/7250872367130365189?lang=es"
-        >PULSAME</a></button>
+    <h3 id="calculo" hidden>resultado</h3>
+</div>
 
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/0yKTDSOF--0?si=zPZ3Vh4g1oMEEweC"
-       title="YouTube video player" frameborder="0" allow=
-       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<script src="./js/main.js"></script> 
+<script src="./js/calculadora.js"></script> 
 </body>
 </html>
