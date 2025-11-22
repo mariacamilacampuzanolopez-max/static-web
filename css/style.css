@@ -1,37 +1,340 @@
-body {
+main section {
+  display: none;   /* todas ocultas por defecto */
+}
 
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  background: linear-gradient(to right, #f0f4f8, hsl(311, 84%, 90%));
+#hero {
+  display: block;  /* solo inicio visible al cargar */
+
+}body {
+  line-height: 1.6;
+}
+
+.header {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  
+}
+
+.nav {
+  display: flex;                 /* logo y menú en una fila */
+  justify-content: space-between;/* logo a la izquierda, menú a la derecha */
+  align-items: center;           /* centra verticalmente */
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  
+}
+
+.logo {
+  display: flex;                 /* imagen + texto en línea */
+  align-items: center;
+  gap: 10px;                     /* espacio entre imagen y texto */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;                 /* enlaces en fila */
+  list-style: none;
+  gap: 2rem;                     /* espacio entre enlaces */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+#hero{
+  padding-top: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/gallery2\ \(1\).jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
-.calculadora {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 300px;
   text-align: center;
-}
+  color: white;
+  padding: 0rem;
 
-input, button {
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
 }
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  
 
-button {
-  background-color: pink;
-  color: black;
+}
+.cta-button {
+  background-color: white;
+  border: none;
+  padding: 1rem 2.5rem;   /* más espacio interno: alto y ancho */
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+  font-size: 1.2rem;      /* aumenta el tamaño del texto */
+  font-weight: bold;      /* texto más marcado */
 }
 
-button:hover {
-  background-color: hwb(311 1% 2%);
+.cta-button:hover {
+  
+  transform: translateY(-8px);     /* se mueve hacia arriba */
+  background-color: #C19A6B;
+}
+
+#Informacion {
+  
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#Informacion h2{
+  font-weight: bold;     /* asegura que sea negrita */
+  font-size: 2rem;       /* opcional: agranda el tamaño */
+  text-align: center;
+  margin-bottom: 2rem;
+  color:  #6b3e26;
+
+}
+
+.card-cafe {
+  background-color: #c19a6b;         /* Fondo blanco o el color que prefieras */
+  border-radius: 10px;            /* Bordes redondeados */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra ligera */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+  cursor: default;                /* Cursor normal por defecto */
+}
+
+.card-cafe:hover {
+  transform: translateY(-10px);   /* Se “alza” hacia arriba */
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2); /* Sombra más marcada */
+  cursor: pointer;                /* Cambia a la manito */
+}
+
+
+#Productos {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#Productos h2{
+  font-weight: bold;     /* asegura que sea negrita */
+  font-size: 2rem;       /* opcional: agranda el tamaño */
+  text-align: center;
+  margin-bottom: 2rem;
+  color:  #6b3e26;
+}
+
+.Productos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* siempre 3 columnas */
+  gap: 2rem;                             /* espacio entre cuadritos */
+  padding: 20px;
+}
+
+.Producto-card {
+  border: 2px solid #8b4513;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.Producto-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.Producto-card:hover {
+  transform: translateY(-10px) scale(1.03); /* Se alza y crece un poco */
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  cursor: pointer; /* Manito */
+}
+
+.Producto-card:hover img {
+  transform: scale(1.05); /* Zoom suave en la imagen */
+}
+
+.Producto-card button {
+  background-color: #8B4513; /* Café elegante */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.Producto-card button:hover {
+  background-color: #A0522D; /* Un tono más claro al pasar */
+  transform: scale(1.05);
+}
+
+.precio {
+  color: #6b3e26;              /* precio en café oscuro */
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.Producto-card button {
+  color: black;
+  background-color: #c19a6b;
+  border: 2px solid #6b3e26;
+  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.Producto-card button:hover {
+  background-color: #6b3e26;
+  color: black;
+}
+
+/* ===== Encuesta ===== */
+#Encuesta {
+  background-color: #fdfaf6;       /* fondo suave */
+  border: 1px solid #c19a6b;       /* bordecito cafecito */
+  border-radius: 12px;             /* puntas redondeadas */
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;                /* ancho máximo */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombra suave */
+}
+
+#Encuesta h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6b3e26;                  /* tono café oscuro */
+  margin-bottom: 1.5rem;
+}
+
+#Encuesta p {
+  font-weight: 500;
+  margin: 1rem 0 0.5rem;
+  color: #333;
+}
+
+#Encuesta input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+#Encuesta button {
+  display: block;
+  margin: 2rem auto 0;
+  background-color: white;
+  border: 2px solid #6b3e26;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#Encuesta button:hover {
+  background-color: #6b3e26;
+  color: white;
+}
+
+/* Resultado */
+#resultado {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: #6b3e26;
+}
+
+#resultado img {
+  width: 150px;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ===== Noticias ===== */
+
+#Noticias {
+  margin: 3rem auto;
+  max-width: 1200px;
+}
+
+#Noticias h1 {
+  text-align: center;        /* centrado */
+  font-size: 2.5rem;         /* más grande */
+  font-weight: bold;
+  color: #6b3e26;            /* tono café oscuro */
+  margin-bottom: 2rem;
+  letter-spacing: 2px;       /* espacio entre letras */
+  text-transform: uppercase; /* estilo elegante */
+}
+
+.noticias-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;   /* centra las tarjetas */
+}
+
+.noticias-grid .card {
+  width: 18rem;
+  background-color: #c19a6b; /* cafecito claro */
+  border: 1px solid #a67b5b;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* sombra más marcada */
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticias-grid .card:hover {
+  transform: translateY(-5px); /* efecto flotante */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.noticias-grid .card h5 {
+  font-weight: bold;
+  color: #6b3e26;
+  margin-bottom: 1rem;
+}
+
+.noticias-grid .btn {
+  background-color: #6b3e26;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.noticias-grid .btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+footer {
+  background: linear-gradient(90deg, #6b3e26, #8c5a3c);
+  color: #f5f0e6;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2); /* sombra superior */
 }
