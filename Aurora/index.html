@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café La Aurora</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="nav">
+      <div class="logo">
+        <img src="./img/logo.jpg" alt="Logo" width="70" height="70">
+        <span>Café La Aurora</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" onclick="mostrarSeccion('hero')">Inicio</a></li>
+        <li><a href="#" onclick="mostrarSeccion('Informacion')">Información</a></li>
+        <li><a href="#" onclick="mostrarSeccion('Productos')">Menú</a></li>
+        <li><a href="#" onclick="mostrarSeccion('Encuesta')">Encuesta</a></li>
+        <li><a href="#" onclick="mostrarSeccion('Noticias')">Noticias</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Inicio -->
+    <section id="hero">
+      <h1>Encuentra tu sabor Favorito</h1>
+      <p>Tu momento perfecto comienza con nuestro Café</p>
+      <button class="cta-button" onclick="mostrarSeccion('Productos')">Ver Productos</button>
+    </section>
+
+    <!-- Información -->
+    <section id="Informacion">
+      <h2>El corazón de nuestra Cafetería</h2>
+      <div class="container text-center my-5">
+        <div class="row align-items-start">
+          <div class="col mx-2 card-cafe">
+            <h3>Sobre Nosotros</h3>
+            <p>La Aurora es más que una cafetería, es un espacio para disfrutar,
+             conectar y comenzar el día con energía. Ofrecemos café de calidad,
+             ambiente acogedor y momentos que iluminan tu rutina.</p>
+          </div>
+          <div class="col mx-2 card-cafe">
+            <h3>Nuestra Misión</h3>
+            <p>Brindar experiencias memorables a través de café artesanal, atención
+            cercana y un ambiente que inspire tranquilidad, creatividad y conexión
+            entre personas.</p>
+          </div>
+          <div class="col mx-2 card-cafe">
+            <h3>Nuestra Visión</h3>
+            <p>Ser reconocida como una cafetería referente en Pereira por su calidad,
+             estética y calidez, creando una comunidad que elige La Aurora como su lugar
+             favorito para compartir, trabajar o simplemente disfrutar el momento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="Productos">
+      <h2>Productos Destacados</h2>
+      <div class="Productos-grid">
+        <div class="Producto-card">
+          <img src="./img/cafe-helado.jpg" alt="Cafe Helado">
+          <h3>Café Helado</h3>
+          <p class="precio">$12.000</p>
+          <p class="descripcion">El equilibrio perfecto entre la intensidad del café recién preparado...</p>
+          <button>Comprar</button>
+        </div>
+         
+		 <div class="Producto-card">
+         <img src="./img/cafe-ingles.jpg" alt="Cafe Inglés">
+         <h3>Café Inglés</h3>
+         <p class="precio">$15.000</p>
+         <p class="descripcion">Una mezcla irresistible de sabor intenso y textura suave...</p>
+         <button>Comprar</button>
+     </div>
+
+       <div class="Producto-card">
+         <img src="./img/cafe-viena.jpg" alt="Cafe Viena">
+         <h3>Café Viena</h3>
+         <p class="precio">$15.000</p>
+         <p class="descripcion">Una mezcla suave de espresso y leche vaporizada...</p>
+          <button>Comprar</button>
+      </div>
+
+      <div class="Producto-card">
+         <img src="./img/cafe-irish.jpg" alt="Cafe Irlandés">
+         <h3>Café Irlandés</h3>
+         <p class="precio">$15.000</p>
+         <p class="descripcion">Una mezcla deliciosa de café frío y hielo batido...</p>
+         <button>Comprar</button>
+     </div>
+
+      <div class="Producto-card">
+         <img src="./img/cafe-liqueurs.jpg" alt="Cafe con Licor">
+         <h3>Café con Licor</h3>
+         <p class="precio">$20.000</p>
+         <p class="descripcion">Una mezcla sofisticada de café frío, crema y un toque de licor...</p>
+         <button>Comprar</button>
+     </div>
+
+      <div class="Producto-card">
+         <img src="./img/cafe-australiano.jpg" alt="Cafe Australiano">
+         <h3>Café Australiano</h3>
+         <p class="precio">$16.000</p>
+         <p class="descripcion">Una mezcla indulgente de café y chocolate, servido caliente...</p>
+         <button>Comprar</button>
+      </div>
+ </section>
+</section>		
+
+    
+    <!-- Encuesta -->
+    <section id="Encuesta">
+      <h1>¿Cuánto sabes de crear empresas?</h1>
+      <form id="quizForm">
+        <!-- preguntas -->
+
+      <p>1. ¿Qué es un plan de negocios?</p>
+      <input type="radio" name="q1" value="a"> Un documento legal<br>
+      <input type="radio" name="q1" value="b"> Una estrategia para iniciar y gestionar una empresa<br>
+      <input type="radio" name="q1" value="c"> Un contrato con proveedores<br>
+
+      <p>2. ¿Qué representa el capital inicial?</p>
+      <input type="radio" name="q2" value="a"> El dinero para comenzar la empresa<br>
+      <input type="radio" name="q2" value="b"> Las ganancias del primer mes<br>
+      <input type="radio" name="q2" value="c"> El salario de los empleados<br>
+
+      <p>3. ¿Qué es una sociedad limitada?</p>
+      <input type="radio" name="q3" value="a"> Una empresa sin empleados<br>
+      <input type="radio" name="q3" value="b"> Una empresa con responsabilidad compartida<br>
+      <input type="radio" name="q3" value="c"> Una empresa pública<br>
+
+      <p>4. ¿Qué se necesita para registrar una empresa?</p>
+      <input type="radio" name="q4" value="a"> Solo tener una idea<br>
+      <input type="radio" name="q4" value="b"> Documentos legales y registro oficial<br>
+      <input type="radio" name="q4" value="c"> Contratar empleados<br>
+
+      <p>5. ¿Qué es el mercado objetivo?</p>
+      <input type="radio" name="q5" value="a"> El lugar donde se vende<br>
+      <input type="radio" name="q5" value="b"> Las personas a quienes se dirige el producto<br>
+      <input type="radio" name="q5" value="c"> Los competidores<br>
+
+      <p>6. ¿Qué es una marca?</p>
+      <input type="radio" name="q6" value="a"> El logo solamente<br>
+      <input type="radio" name="q6" value="b"> El nombre y la identidad de la empresa<br>
+      <input type="radio" name="q6" value="c"> El producto más vendido<br>
+
+        <button type="button" onclick="calcularResultado()">Enviar respuestas</button>
+      </form>
+      <div id="resultado"></div>
+    </section>
+
+    <!-- Noticias -->
+   <section id="Noticias">
+  <h1>Novedades</h1>
+  <div class="noticias-grid">
+    <div class="card">
+      <img src="./img/fondo.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Noticia 1</h5>
+        <p class="card-text">Desmintiendo mitos del café con expertos en la feria Cafés de Colombia Expo 2024</p>
+        <a href="https://youtu.be/499EyiQjIn0?si=BpjjC7WlWqj-wk8q" class="btn btn-primary stretched-link">Ver más...</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./img/gallery1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Noticia 2</h5>
+        <p class="card-text">Café y corazón: nuevo estudio derrumba mito entre esta bebida y la salud cardíaca que la gente cree</p>
+        <a href="https://www.eltiempo.com/cultura/gente/cafe-y-corazon-nuevo-estudio-derrumba-mito-entre-esta-bebida-y-la-salud-cardiaca-que-la-gente-cree-3508409" class="btn btn-primary stretched-link">Ver más...</a>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer>
+    <p>&copy; La Aurora</p>
+  </footer>
+
+  <!-- Scripts -->
+
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
